@@ -205,6 +205,8 @@ class sergio (object):
                     #        binDict[b].append(gene(np.int(row[0]),'T', b))
 
         #self.master_regulators_idx_ = set(np.setdiff1d(allRegs, allTargets))
+        #print(self.graph_)
+
 
         with open(input_file_regs,'r') as f:
             masterRegs = []
@@ -219,6 +221,7 @@ class sergio (object):
                 self.graph_[int(float(row[0]))]['regs'] = []
                 self.graph_[int(float(row[0]))]['level'] = -1
 
+                print(self.graph_[int(float(row[0]))]['rates'])
                 #if self.dyn_:
                 #    for b in range(self.nBins_):
                 #        binDict[b].append(gene(np.int(row[0]),'MR', b))
